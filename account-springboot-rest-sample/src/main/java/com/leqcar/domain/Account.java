@@ -11,6 +11,7 @@ public class Account {
     private long id;
     private String name;
     private Calendar dateOfBirth;
+    private String socialSecurityNumber;
 
     public Account() {
 
@@ -37,5 +38,13 @@ public class Account {
 
     public void setDateOfBirth(Calendar dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
+    }
+
+    public void setSocialSecurityNumber(String socialSecurityNumber) {
+        this.socialSecurityNumber = socialSecurityNumber;
     }
 }
