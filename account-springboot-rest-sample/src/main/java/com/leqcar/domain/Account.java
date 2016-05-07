@@ -5,13 +5,13 @@ import java.util.Calendar;
 /**
  * Created by JONGT on 5/7/2016.
  */
-
 public class Account {
 
     private long id;
     private String name;
     private Calendar dateOfBirth;
     private String socialSecurityNumber;
+    private String accountNumber;
 
     public Account() {
 
@@ -47,4 +47,17 @@ public class Account {
     public void setSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
     }
+
+	/**
+	 * @return the accountNumber
+	 */
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+	/**
+	 * @param accountNumber the accountNumber to set
+	 */
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
 }
