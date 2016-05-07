@@ -1,5 +1,7 @@
 package com.leqcar.domain;
 
+import java.util.Calendar;
+
 /**
  * Created by JONGT on 5/7/2016.
  */
@@ -8,6 +10,7 @@ public class Account {
 
     private long id;
     private String name;
+    private Calendar dateOfBirth;
 
     public Account() {
 
@@ -26,5 +29,13 @@ public class Account {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Calendar getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Calendar dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 }
