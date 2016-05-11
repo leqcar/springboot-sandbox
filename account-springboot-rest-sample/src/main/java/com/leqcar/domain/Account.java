@@ -1,26 +1,46 @@
 package com.leqcar.domain;
 
+import javax.persistence.*;
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+
+import static org.apache.commons.lang.builder.ToStringBuilder.reflectionToString;
 
 /**
  * Created by JONGT on 5/7/2016.
  */
+@Entity
 public class Account {
 
-    private long id;
+    @Id
+    @GeneratedValue
+    private Long id;
     private String name;
-    private Calendar dateOfBirth;
-    private String socialSecurityNumber;
     private String accountNumber;
 
-    public Account() {
+    private Calendar dateOfBirth;
+    private String socialSecurityNumber;
+    private BigDecimal totalPoints;
 
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "ACCOUNT_ID")
+    private List<Card> cards = new ArrayList<>();
+
+    public Account() { //for JPA
     }
-    public long getId() {
+
+    public Account(String name, String accountNumber) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -48,7 +68,15 @@ public class Account {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
-	/**
+    public BigDecimal getTotalPoints() {
+        return totalPoints;
+    }
+
+    public void setTotalPoints(BigDecimal totalPoints) {
+        this.totalPoints = totalPoints;
+    }
+
+    /**
 	 * @return the accountNumber
 	 */
 	public String getAccountNumber() {
@@ -60,4 +88,18 @@ public class Account {
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
+
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
+    public void setCards(List<Card> cards) {
+        this.cards = cards;
+    }
+
+    @Override
+    public String toString() {
+        return reflectionToString(this);
+    }
 }

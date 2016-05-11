@@ -20,6 +20,7 @@
 
     <modules>
         <module>account-springboot-rest-sample</module>
+        <module>springboot-bare-sandbox</module>
     </modules>
 
 
