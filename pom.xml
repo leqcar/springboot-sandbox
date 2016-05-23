@@ -22,6 +22,7 @@
         <module>account-springboot-rest-sample</module>
         <module>springboot-bare-sandbox</module>
         <module>reward-springboot-jdbc-sample</module>
+        <module>crm-springboot-jparest-stack</module>
     </modules>
 
 
