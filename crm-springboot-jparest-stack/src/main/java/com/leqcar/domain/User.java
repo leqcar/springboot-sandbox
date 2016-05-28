@@ -56,7 +56,7 @@ public class User implements Serializable {
     }
 
     public User(User usr, Set<Customer> customerCollections) {
-
+        this(usr.getId(), usr.getPassword(), usr.getFirstName(), usr.getLastName());
     }
 
     public User(Long id, String username, String firstName, String lastName) {
@@ -151,5 +151,14 @@ public class User implements Serializable {
 
     public void setSignupDate(Date signupDate) {
         this.signupDate = signupDate;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

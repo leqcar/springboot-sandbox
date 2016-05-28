@@ -3,6 +3,8 @@ package com.leqcar.service;
 import com.leqcar.domain.Customer;
 import com.leqcar.domain.ProfilePhoto;
 import com.leqcar.domain.User;
+import com.leqcar.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +15,14 @@ import java.util.Collection;
  */
 @Service
 public class JpaCrmService implements CrmService {
+
+    UserRepository userRepository;
+
+    @Autowired
+    public JpaCrmService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
     @Override
     public ProfilePhoto readUserProfile(long userId) {
         return null;
@@ -25,7 +35,7 @@ public class JpaCrmService implements CrmService {
 
     @Override
     public User findById(long userId) {
-        return null;
+        return userRepository.getOne(userId);
     }
 
     @Override

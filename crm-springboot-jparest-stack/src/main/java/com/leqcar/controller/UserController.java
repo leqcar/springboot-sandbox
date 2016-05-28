@@ -11,20 +11,19 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
 /**
  * Created by jongtenerife on 23/05/2016.
  */
-@Controller
+@RestController
 @ExposesResourceFor(User.class)
-@RequestMapping(value = "users",
-        produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "users", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 
     private CrmService crmService;
