@@ -56,4 +56,15 @@ public class Account {
     public Set<Card> getCards() {
         return Collections.unmodifiableSet(cards);
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", totalPoints=" + totalPoints +
+                ", accountDetails=" + accountDetails +
+                ", cards=" + cards +
+                '}';
+    }
 }

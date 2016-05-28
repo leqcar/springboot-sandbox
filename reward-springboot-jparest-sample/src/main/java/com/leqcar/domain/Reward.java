@@ -138,4 +138,19 @@ public class Reward {
     public void setId(Long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Reward{" +
+                "id=" + id +
+                ", confirmationNumber='" + confirmationNumber + '\'' +
+                ", rewardPoints=" + rewardPoints +
+                ", merchantDetails=" + merchantDetails +
+                ", accountDetails=" + accountDetails +
+                ", cardDetails=" + cardDetails +
+                ", rewardDate=" + rewardDate +
+                ", purchaseAmount=" + purchaseAmount +
+                ", purchaseDate=" + purchaseDate +
+                '}';
+    }
 }

@@ -14,7 +14,7 @@ import java.util.Date;
  * Created by jongtenerife on 14/05/2016.
  */
 @RepositoryRestResource
-public interface RewardRepository extends JpaRepository<Reward, Long> {
+public interface RewardRepository extends JpaRepository<Account, Long> {
 
 /*    String confirmReward(
             Account account, String cardNumber, String merchantNumber,
