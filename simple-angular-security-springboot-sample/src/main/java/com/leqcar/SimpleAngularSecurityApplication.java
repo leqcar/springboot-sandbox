@@ -1,7 +1,10 @@
 package com.leqcar;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Reference :
@@ -9,6 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+@EnableAutoConfiguration
+@Configuration
+@ComponentScan
 public class SimpleAngularSecurityApplication {
 
     public static void main(String[] args) {
