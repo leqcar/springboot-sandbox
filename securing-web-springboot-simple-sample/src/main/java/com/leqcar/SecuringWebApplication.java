@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 /**
  * Created by jongtenerife on 30/05/2016.
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 @Configuration
 @EnableAutoConfiguration
+@EnableWebSecurity
 public class SecuringWebApplication {
 
     public static void main(String[] args) {
