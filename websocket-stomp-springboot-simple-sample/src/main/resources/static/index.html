@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <script src="js/sockjs-0.3.4.js"></script>
+    <script src="js/stomp.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script stype="text/javascript" src="js/greeting.js"></script>
+</head>
+
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div>
+    <div>
+        <button id="connect">Connect</button>
+        <button id="disconnect" disabled="disabled">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <label>What is your name?</label><input type="text" id="name" />
+        <button id="sendName">Send</button>
+        <p id="response"></p>
+    </div>
+</div>
+<script>
+    $(function(){
+        LEQCAR.greeting.init();
+    });
+</script>
+</body>
+
