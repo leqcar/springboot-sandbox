@@ -20,13 +20,16 @@
 
     <modules>
         <module>account-springboot-rest-sample</module>
-        <module>springboot-bare-sandbox</module>
-        <module>reward-springboot-jdbc-sample</module>
-        <module>reward-springboot-jparest-sample</module>
+        <module>consume-springboot-verysimple-restws</module>
         <module>crm-springboot-jparest-stack</module>
+        <module>json-reader-springboot-sample</module>
+        <module>multiple-datasource-h2-springboot-sample</module>
+        <module>reward-springboot-jparest-sample</module>
+        <module>reward-springboot-jdbc-sample</module>
+        <module>securing-web-springboot-simple-sample</module>
+        <module>simple-angular-security-springboot-sample</module>
+        <module>springboot-bare-sandbox</module>
     </modules>
-
-
     <build>
         <plugins>
             <plugin>

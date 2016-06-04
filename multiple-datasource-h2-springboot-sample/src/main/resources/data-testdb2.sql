@@ -1,0 +1,1 @@
+insert into T_ACCOUNT (NUMBER, NAME, TOTAL_POINTS) values ('9999999', 'For DB 2', 0);

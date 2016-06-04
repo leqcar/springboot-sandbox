@@ -1,0 +1,1 @@
+insert into T_ACCOUNT (NUMBER, NAME, TOTAL_POINTS) values ('8861888', 'Charlie Brown', 0);
