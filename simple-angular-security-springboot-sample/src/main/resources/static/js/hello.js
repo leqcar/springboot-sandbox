@@ -17,8 +17,8 @@ angular.module('hello', ['ngRoute'])
 
   .controller('home', function($http) {
     var self = this;
-    $http.get("/resource/").success(function(data) {
-        self.greeting = data;
+    $http.get("/resource/").then(function(response) {
+        self.greeting = response.data;
     })
 
 })

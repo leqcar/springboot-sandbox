@@ -1,8 +1,22 @@
-<h1>Greeting</h1>
-<div ng-show="authenticated">
-    <p>The ID is {{controller.greeting.id}}</p>
-    <p>The content is {{controller.greeting.content}}</p>
-</div>
-<div  ng-show="!authenticated">
-    <p>Login to see your greeting</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link href="css/angular-bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+</style>
+</head>
+
+    <h1>Greeting</h1>
+    <div ng-show="authenticated">
+        <p>The ID is {{controller.greeting.id}}</p>
+        <p>The content is {{controller.greeting.content}}</p>
+    </div>
+    <div  ng-show="!authenticated">
+        <p>Login to see your greeting</p>
+    </div>
+
+</html>
