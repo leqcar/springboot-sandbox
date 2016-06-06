@@ -16,16 +16,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.httpBasic()
-                .and()
-                    .authorizeRequests()
-                        .antMatchers("/index.html" +
-                                ", /login.html" +
-                                ", /home.html" +
-                                ", /").permitAll()
-                        .anyRequest().authenticated()
-                        .and()
-                        .addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class)
-                        .csrf().csrfTokenRepository(createCsrfTokenRepository());
+                 .and()
+                 	.authorizeRequests()
+		            .antMatchers("/index.html", "/login.html", "/home.html", "/").permitAll()
+		            .anyRequest().authenticated()
+		            .and()
+		            .addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class)
+		            .csrf().csrfTokenRepository(createCsrfTokenRepository())
+		     .and().logout();        		
+
     }
 
 	private CsrfTokenRepository createCsrfTokenRepository() {

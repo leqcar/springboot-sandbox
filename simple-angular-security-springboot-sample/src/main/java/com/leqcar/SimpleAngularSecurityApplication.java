@@ -8,7 +8,8 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Reference :
- * https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application
+ * 	https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application
+ * 	https://spring.io/guides/tutorials/spring-security-and-angular-js/ (Official)
  */
 
 @SpringBootApplication
