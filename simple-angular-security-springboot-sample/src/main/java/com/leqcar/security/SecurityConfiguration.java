@@ -30,7 +30,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 
 	private CsrfTokenRepository createCsrfTokenRepository() {
 		HttpSessionCsrfTokenRepository repository = new HttpSessionCsrfTokenRepository();
-		repository.setHeaderName("X-XRSF-TOKEN");
+		repository.setHeaderName("X-XSRF-TOKEN");
 		return repository;
 	}
 }
