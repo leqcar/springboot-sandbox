@@ -13,7 +13,7 @@ import java.util.UUID;
  */
 @RestController
 public class SimpleController {
-    @RequestMapping("/resource")
+    //@RequestMapping("/resource")
     public Map<String, Object> home() {
         Map<String, Object> model = new HashMap<>();
         model.put("id", UUID.randomUUID().toString());

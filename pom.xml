@@ -27,6 +27,7 @@
         <module>reward-springboot-jparest-sample</module>
         <module>reward-springboot-jdbc-sample</module>
         <module>securing-web-springboot-simple-sample</module>
+        <module>simple-angular-security-new-resource-server</module>
         <module>simple-angular-security-springboot-sample</module>
         <module>springboot-bare-sandbox</module>
     </modules>
