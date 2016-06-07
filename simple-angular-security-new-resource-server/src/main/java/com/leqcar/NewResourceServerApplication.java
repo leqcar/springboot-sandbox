@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,6 +23,9 @@ public class NewResourceServerApplication {
 	}
 	
 	@RequestMapping("/")
+	@CrossOrigin(origins="*", maxAge=3600) 
+	// Cross Origin Resource Sharing (CORS) Negotiation, origins=* is quick and dirty, and it works, 
+	// but it is not not secure and is not in any way recommended.
 	public Message message() {
 		return new Message("Hello Spring Boot");
 	}
