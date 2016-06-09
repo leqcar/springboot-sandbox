@@ -30,6 +30,7 @@
         <module>simple-angular-security-new-resource-server</module>
         <module>simple-angular-security-springboot-sample</module>
         <module>springboot-bare-sandbox</module>
+        <module>websocket-stomp-springboot-simple-sample</module>
     </modules>
     <build>
         <plugins>
