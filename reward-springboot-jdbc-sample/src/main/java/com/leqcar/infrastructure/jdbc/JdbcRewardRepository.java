@@ -1,13 +1,12 @@
 package com.leqcar.infrastructure.jdbc;
 
-import com.leqcar.domain.Account;
-import com.leqcar.domain.Reward;
-import com.leqcar.repository.RewardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import javax.sql.DataSource;
+import com.leqcar.domain.Account;
+import com.leqcar.domain.Reward;
+import com.leqcar.repository.RewardRepository;
 
 /**
  * Created by jongtenerife on 14/05/2016.
@@ -15,7 +14,6 @@ import javax.sql.DataSource;
 @Component
 public class JdbcRewardRepository implements RewardRepository {
 
-    private DataSource dataSource;
     private JdbcTemplate jdbcTemplate;
 
     private static final String SQL_INSERT_REWARD =
@@ -25,8 +23,7 @@ public class JdbcRewardRepository implements RewardRepository {
             "select next value for S_REWARD_CONFIRMATION_NUMBER from DUAL_REWARD_CONFIRMATION_NUMBER";
 
     @Autowired
-    public JdbcRewardRepository(DataSource dataSource, JdbcTemplate jdbcTemplate) {
-        this.dataSource = dataSource;
+    public JdbcRewardRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 

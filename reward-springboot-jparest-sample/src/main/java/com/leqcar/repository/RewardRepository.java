@@ -1,14 +1,9 @@
 package com.leqcar.repository;
 
-import com.leqcar.common.Money;
-import com.leqcar.domain.Account;
-import com.leqcar.domain.Reward;
-import com.leqcar.domain.RewardPoints;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.springframework.stereotype.Repository;
 
-import java.util.Date;
+import com.leqcar.domain.Account;
 
 /**
  * Created by jongtenerife on 14/05/2016.

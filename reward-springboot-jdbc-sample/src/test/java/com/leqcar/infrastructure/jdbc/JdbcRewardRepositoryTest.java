@@ -15,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.leqcar.RewardApplication;
 import com.leqcar.common.Money;
 import com.leqcar.domain.Account;
 import com.leqcar.domain.Reward;
@@ -28,7 +29,7 @@ import com.leqcar.repository.RewardRepository;
 //TODO : Using SpringBoot 1.4.XXX, try using @SpringRunner, @SpringBootTest (simplified version)
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes={JdbcRewardRepositoryTest.class})
+@SpringBootTest(classes={RewardApplication.class})
 public class JdbcRewardRepositoryTest {
 
     @Autowired
