@@ -10,7 +10,12 @@ import java.util.Currency;
  */
 public class Money implements Serializable {
 
-    public static final String DEFAULT_CURRENCY = "USD";
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4268455739797968549L;
+
+	public static final String DEFAULT_CURRENCY = "USD";
 
     private String currency;
     private BigDecimal value;

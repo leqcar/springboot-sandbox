@@ -1,15 +1,15 @@
 package com.leqcar;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.leqcar.domain.Employee;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.core.io.Resource;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.leqcar.domain.Employee;
 
 /**
  * Created by JONGT on 5/29/2016.

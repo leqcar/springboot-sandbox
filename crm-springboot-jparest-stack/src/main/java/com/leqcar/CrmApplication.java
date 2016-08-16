@@ -1,28 +1,32 @@
 package com.leqcar;
 
-import com.leqcar.controller.UserController;
-import com.leqcar.domain.Customer;
-import com.leqcar.domain.User;
-import com.leqcar.repository.UserRepository;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.embedded.ServletRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
-import org.springframework.hateoas.config.EnableHypermediaSupport;
 import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
-import java.util.*;
-
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
+import com.leqcar.controller.UserController;
+import com.leqcar.domain.Customer;
+import com.leqcar.domain.User;
+import com.leqcar.repository.UserRepository;
 
 /**
  * Created by jongtenerife on 22/05/2016.
@@ -79,7 +83,7 @@ public class CrmApplication {
     ResourceAssembler<User, Resource<User>> userResourceAssembler() {
         return (u) -> {
             try {
-                String customersRel = "customers", photoRel = "photo";
+                //String customersRel = "customers", photoRel = "photo";
                 User user = new User(u);
                 user.setPassword(null);
                 long userId = u.getId();

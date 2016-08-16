@@ -1,25 +1,25 @@
 package com.leqcar.infrastructure.jdbc;
 
-import com.leqcar.RewardApplication;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.isEmptyString;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.core.Is.is;
+
+import java.util.Date;
+import java.util.Map;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 import com.leqcar.common.Money;
 import com.leqcar.domain.Account;
 import com.leqcar.domain.Reward;
 import com.leqcar.domain.RewardPoints;
 import com.leqcar.repository.RewardRepository;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.util.Date;
-import java.util.Map;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.isEmptyString;
-import static org.hamcrest.Matchers.not;
-import static org.hamcrest.core.Is.is;
 
 /**
  * Created by jongtenerife on 14/05/2016.
@@ -28,7 +28,7 @@ import static org.hamcrest.core.Is.is;
 //TODO : Using SpringBoot 1.4.XXX, try using @SpringRunner, @SpringBootTest (simplified version)
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(RewardApplication.class)
+@SpringBootTest(classes={JdbcRewardRepositoryTest.class})
 public class JdbcRewardRepositoryTest {
 
     @Autowired

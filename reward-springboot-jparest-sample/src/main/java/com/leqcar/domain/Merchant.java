@@ -1,7 +1,14 @@
 package com.leqcar.domain;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by jongtenerife on 14/05/2016.
@@ -16,6 +23,8 @@ public class Merchant {
 
     @Embedded
     private MerchantDetails merchantDetails;
+    
+    @Column(name = "name")
     private String name;
 
     @Column(name = "amount_per_point")

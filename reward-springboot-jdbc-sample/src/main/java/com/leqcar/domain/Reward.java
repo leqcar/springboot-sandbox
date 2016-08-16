@@ -1,9 +1,8 @@
 package com.leqcar.domain;
 
-import com.leqcar.common.Money;
-
-import java.math.BigDecimal;
 import java.util.Date;
+
+import com.leqcar.common.Money;
 
 /**
  * Created by jongtenerife on 14/05/2016.

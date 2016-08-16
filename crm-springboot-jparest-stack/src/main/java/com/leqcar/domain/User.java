@@ -13,7 +13,12 @@ import java.util.Set;
 @Table(name = "user_account")
 public class User implements Serializable {
 
-    @Id
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -1098145072298144585L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
